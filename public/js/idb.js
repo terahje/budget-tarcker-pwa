@@ -34,6 +34,7 @@ request.onsuccess = function(event) {
 
   // This function will be executed if we attempt to submit a new transaction and there's no internet connection
 function saveRecord(record) {
+    alert('Currently offline. All transactions will be saved once back online');
     // open a new transaction with the database with read and write permissions 
     const transaction = db.transaction(['new_transaction'], 'readwrite');
   
